@@ -8,11 +8,18 @@ export(float) var max_speed = 400
 
 func _ready():
 	set_process(true)
+	set_process_input(true)
 	pass
+	
+func _input(event):
+	if event.is_action_pressed("Shoot"):
+		print("Shooting")
+		
 
 func _process(delta):
-	printt(speed, max_speed, degrees)
+	movement(delta)
 
+func movement(delta):
 	if Input.is_action_pressed("Left"): #Input Left (Left Arrow, 'A') is true by tick.
 		degrees += (speed * delta) #Math to move degrees right.
 	elif Input.is_action_pressed("Right"): #input Right (Right Arrow, 'D') is true by tick.
@@ -24,6 +31,7 @@ func _process(delta):
 		degrees = 0
 
 	set_rotd(degrees) #set_rotd(degrees) will rotate the actor in degrees. Note the 'd' after 'rot'.
+	
 
 # --------------------------------------------------------------------------------------------------------------
 
