@@ -1,6 +1,6 @@
 extends Node2D
 
-var points setget set_points
+var points = 0
 var lives
 var metadata = {}
 
@@ -10,5 +10,6 @@ func _ready():
 func _process():
 	pass
 	
-func set_points(val):
+func add_points(val):
+	points += val
 	pass
