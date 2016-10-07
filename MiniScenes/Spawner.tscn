@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=2 format=1]
 
 [ext_resource path="res://Scripts/Spawner.gd" type="Script" id=1]
-[ext_resource path="res://Images/SpawnerIco.png" type="Texture" id=2]
 
 [node name="Spawner" type="Node2D"]
 
@@ -22,25 +21,19 @@ autostart = true
 
 [node name="Position2D" type="Position2D" parent="."]
 
-transform/pos = Vector2( 144, 0 )
-
-[node name="Sprite" type="Sprite" parent="Position2D"]
-
-transform/pos = Vector2( -144, 0 )
-texture = ExtResource( 2 )
-offset = Vector2( 144, 0 )
+transform/pos = Vector2( -90, 0 )
 
 [node name="Position2D1" type="Position2D" parent="."]
 
-transform/pos = Vector2( -144, 0 )
+transform/pos = Vector2( 90, 0 )
 
 [node name="Position2D2" type="Position2D" parent="."]
 
-transform/pos = Vector2( 0, 144 )
+transform/pos = Vector2( 0, 90 )
 
 [node name="Position2D3" type="Position2D" parent="."]
 
-transform/pos = Vector2( 0, -144 )
+transform/pos = Vector2( 0, -90 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

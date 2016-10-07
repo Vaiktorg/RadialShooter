@@ -19,5 +19,6 @@ transform/scale = Vector2( 4, 4 )
 [node name="Node2D" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
+offset = Vector2( 0, -24 )
 
 

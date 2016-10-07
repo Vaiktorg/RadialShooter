@@ -1,64 +1,44 @@
 [gd_scene load_steps=8 format=1]
 
-[ext_resource path="res://MiniScenes/Spawner.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Images/background/BG_Space -GBJAM 5.png" type="Texture" id=2]
-[ext_resource path="res://Images/objects/Orbit_Ring/Orbit_Ring.png" type="Texture" id=3]
-[ext_resource path="res://MiniScenes/Nave.tscn" type="PackedScene" id=4]
-[ext_resource path="res://MiniScenes/Core.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MiniScenes/LimitArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MiniScenes/Spawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/background/BG_Space -GBJAM 5.png" type="Texture" id=3]
+[ext_resource path="res://MiniScenes/Orbit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MiniScenes/Nave.tscn" type="PackedScene" id=5]
 [ext_resource path="res://MiniScenes/HUD.tscn" type="PackedScene" id=6]
-[ext_resource path="res://MiniScenes/LimitArea.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MiniScenes/Core.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
-transform/pos = Vector2( 320, 240 )
-
-[node name="Spawner" parent="." instance=ExtResource( 1 )]
-
-transform/pos = Vector2( 80, 72 )
-rate = 2.0
-size = "Big"
-mode = "Random"
-
-[node name="BG" type="Sprite" parent="."]
-
-texture = ExtResource( 2 )
-centered = false
-
-[node name="Orbit" type="Sprite" parent="."]
-
-transform/pos = Vector2( 80, 72 )
-texture = ExtResource( 3 )
-
-[node name="Nave" parent="." instance=ExtResource( 4 )]
-
-[node name="BulletSpawn" parent="Nave"]
-
-transform/pos = Vector2( 0, -40 )
-
-[node name="Node2D" parent="Nave"]
-
-offset = Vector2( 0, -24 )
-
-[node name="Core" parent="." instance=ExtResource( 5 )]
-
-editor/display_folded = true
-transform/pos = Vector2( 80, 72 )
-space_override = 4
-
-[node name="StaticBody2D" parent="Core"]
-
-editor/display_folded = true
-
-[node name="HUD" parent="." instance=ExtResource( 6 )]
-
-[node name="LimitArea" parent="." instance=ExtResource( 7 )]
+[node name="LimitArea" parent="." instance=ExtResource( 1 )]
 
 input/pickable = false
 space_override = 3
 gravity_point = true
 gravity_vec = Vector2( 0, 0 )
 
+[node name="Spawner" parent="." instance=ExtResource( 2 )]
 
-[editable path="Spawner"]
-[editable path="Nave"]
+transform/pos = Vector2( 80, 72 )
+rate = 0.8
+size = "Big"
+mode = "Random"
+
+[node name="BG" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Orbit" parent="." instance=ExtResource( 4 )]
+
+[node name="Nave" parent="." instance=ExtResource( 5 )]
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Core" parent="." instance=ExtResource( 7 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 80, 72 )
+
+
 [editable path="Core"]

@@ -37,7 +37,7 @@ func _process(delta):
 	self.set_rotd(degrees)
 	degrees += speed
 
-	if posIndex >= 3 or posIndex < 0:
+	if posIndex > 3 or posIndex < 0:
 		posIndex = 0
 	
 	
@@ -66,5 +66,5 @@ func instance_scene(scene):
 	get_tree().get_root().add_child(tempast)
 	tempast.set_pos(positions[posIndex])
 
-	posIndex += 1
+	posIndex = randi() % 4
 	pass
