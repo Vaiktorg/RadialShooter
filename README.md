@@ -24,3 +24,6 @@ Move around in 4 directions, destroying asteroids attempting to hit earth. If as
 ###Game Made By:
 * Victor Hernandez
 * Manuel Soto
+
+###Game Made In:
+* Godot Engine v2.1
