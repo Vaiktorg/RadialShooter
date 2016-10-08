@@ -3,11 +3,11 @@ extends Node2D
 
 var degrees = 0
 
-export(float) var speed = 200
-export(float) var max_speed = 400
+export(float) var speed = 90
 
 var bulletscene = preload("res://MiniScenes/Bullet.tscn")
 onready var bulletpos = get_node("BulletSpawn")
+onready var sound = get_node("SamplePlayer")
 
 func _ready():
 	set_process_input(true)
@@ -15,6 +15,7 @@ func _ready():
 func _input(event):
 	movement(event)
 	if event.is_action_pressed("Shoot"):
+		sound.play("Shoot")
 		spawn_bullet(bulletscene)
 
 # --------------------------------------------------------------------------

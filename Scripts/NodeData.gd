@@ -1,10 +1,11 @@
 
 extends Node2D
 
-var Positions = {}
+var Data = {}
+var Previous_Scene
 
 func _ready():
 	pass
 
-func add_pos_data(name,vector2):
-	Positions[name] = vector2
+func add_data(name,data):
+	Data[name] = data

@@ -4,7 +4,7 @@ extends Node2D
 onready var timer = get_node("Timer")
 
 export var speed = 10
-export(float, 0, 1, .1) var rate
+export(float, 0, 3, .1) var rate
 export(String, "Small", "Medium", "Big") var size
 export(String, "Random", "Specific") var mode
 
@@ -22,14 +22,16 @@ var asteroids = [
 
 func _ready():
 	set_process(true)
-	
-	NodeData.add_data("SpawnRate", rate)
-	
+	timer.set_wait_time(rate)
+
 	positions.append(get_node("Position2D").get_global_pos())
 	positions.append(get_node("Position2D1").get_global_pos())
 	positions.append(get_node("Position2D2").get_global_pos())
 	positions.append(get_node("Position2D3").get_global_pos())
-
+	positions.append(get_node("Position2D4").get_global_pos())
+	positions.append(get_node("Position2D5").get_global_pos())
+	positions.append(get_node("Position2D6").get_global_pos())
+	positions.append(get_node("Position2D7").get_global_pos())
 # -------------------------------------------------------------------------
 
 func _process(delta):
@@ -38,10 +40,8 @@ func _process(delta):
 	self.set_rotd(degrees)
 	degrees += speed
 
-	if posIndex > 3 or posIndex < 0:
+	if posIndex > 8 or posIndex < 0:
 		posIndex = 0
-
-	timer.set_wait_time(NodeData.Data.SpawnRate)
 
 # -------------------------------------------------------------------------
 
@@ -67,5 +67,5 @@ func instance_scene(scene):
 	get_tree().get_root().add_child(tempast)
 	tempast.set_pos(positions[posIndex])
 
-	posIndex = randi() % 4
+	posIndex = randi() % 8
 	pass
