@@ -1,14 +1,13 @@
 
 extends Control
 
-onready var pointlabel = get_node("Points")
-onready var timerlabel = get_node("TimerText")
-onready var timer = get_node("Timer")
+onready var points = get_node("PointLabel/Points")
+onready var wave = get_node("WaveLabel/Wave")
 var seconds = 0
 
-func _on_Timer_timeout():
-	seconds += 1
-	timerlabel.set_text(str(seconds))
-	timer.start()
-	pass # replace with function body
+func _ready():
+	set_process(true)
 
+func _process(delta):
+	points.set_text(str(Points.points))
+	wave.set_text(str(Points.wave))

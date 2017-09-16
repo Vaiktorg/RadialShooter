@@ -6,9 +6,8 @@
 
 transform/pos = Vector2( 320, 288 )
 script/script = ExtResource( 1 )
-__meta__ = { "_edit_group_":true }
 speed = 1
-rate = 1.0
+rate = 2.0
 size = null
 mode = null
 

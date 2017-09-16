@@ -20,6 +20,6 @@ func _process(delta):
 	
 	
 
-func set_direction(val):
+func set_direction(val): 
 	direction = Vector2(sin(deg2rad(-val)), -cos(deg2rad(-val)))
 	
