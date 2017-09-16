@@ -81,10 +81,24 @@ draw_bg = true
 samples/Accept = { "db":0.0, "pitch":1.0, "sample":ExtResource( 9 ) }
 samples/Select = { "db":0.0, "pitch":1.0, "sample":ExtResource( 10 ) }
 
+<<<<<<< HEAD
 [node name="Control" type="Node"]
 
 script/script = ExtResource( 1 )
 __meta__ = { "_edit_group_":true }
+=======
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+>>>>>>> origin/master
 
 [node name="Panel" type="Panel" parent="."]
 
@@ -100,11 +114,16 @@ custom_styles/panel = SubResource( 1 )
 
 [node name="Theme" type="Label" parent="Panel"]
 
+<<<<<<< HEAD
 rect/scale = Vector2( 0.6, 0.6 )
+=======
+rect/scale = Vector2( 0.75, 0.75 )
+>>>>>>> origin/master
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
+<<<<<<< HEAD
 margin/left = 8.0
 margin/top = 8.0
 margin/right = 248.0
@@ -112,6 +131,15 @@ margin/bottom = 56.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.0313726, 0.0941176, 0.176471, 1 )
 text = "Planet Defender"
+=======
+margin/left = 16.0
+margin/top = 0.0
+margin/right = 186.0
+margin/bottom = 48.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.0313726, 0.0941176, 0.176471, 1 )
+text = "Planet Defense"
+>>>>>>> origin/master
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -124,10 +152,17 @@ focus/ignore_mouse = true
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+<<<<<<< HEAD
 margin/left = 36.0
 margin/top = 92.0
 margin/right = 124.0
 margin/bottom = 108.0
+=======
+margin/left = 40.0
+margin/top = 96.0
+margin/right = 120.0
+margin/bottom = 112.0
+>>>>>>> origin/master
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
@@ -149,10 +184,17 @@ focus/ignore_mouse = true
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+<<<<<<< HEAD
 margin/left = 36.0
 margin/top = 108.0
 margin/right = 124.0
 margin/bottom = 126.0
+=======
+margin/left = 40.0
+margin/top = 112.0
+margin/right = 120.0
+margin/bottom = 128.0
+>>>>>>> origin/master
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
@@ -196,15 +238,25 @@ offset = Vector2( -18, -14 )
 
 [node name="TopScore" type="Label" parent="Panel"]
 
+<<<<<<< HEAD
 rect/scale = Vector2( 0.8, 0.8 )
+=======
+rect/scale = Vector2( 0.75, 0.75 )
+>>>>>>> origin/master
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
+<<<<<<< HEAD
 margin/top = 126.0
 margin/right = 90.0
 margin/bottom = 153.0
+=======
+margin/top = 136.0
+margin/right = 92.0
+margin/bottom = 144.0
+>>>>>>> origin/master
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0313726, 0.0941176, 0.176471, 1 )
 text = "Top Score:"
@@ -220,10 +272,17 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
+<<<<<<< HEAD
 margin/left = 85.0
 margin/top = 3.0
 margin/right = 115.0
 margin/bottom = 24.0
+=======
+margin/left = 89.0
+margin/top = 0.0
+margin/right = 110.0
+margin/bottom = 8.0
+>>>>>>> origin/master
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0313726, 0.0941176, 0.176471, 1 )
 text = "0"

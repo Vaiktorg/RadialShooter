@@ -23,7 +23,11 @@ func set_damage(val):
 
 func check_life():
 	if hitpoints <= 0:
+<<<<<<< HEAD
 		Sound.play("Asteroid")
+=======
+		Sound.node.play("Asteroid")
+>>>>>>> origin/master
 		explode()
 		queue_free()
 		Points.add_points(1)
@@ -36,12 +40,20 @@ func movement(delta):
 func damage_inflict():
 	if is_colliding():
 		if get_collider().get_name() == "Orbit":
+<<<<<<< HEAD
 			Sound.play("Orbit")
+=======
+			Sound.node.play("Orbit")
+>>>>>>> origin/master
 			explode()
 			get_collider().set_damage(1)
 			queue_free()
 		if get_collider().get_name() == "Core":
+<<<<<<< HEAD
 			Sound.play("Core")
+=======
+			Sound.node.play("Core")
+>>>>>>> origin/master
 			get_collider().set_dead()
 			queue_free()
 			

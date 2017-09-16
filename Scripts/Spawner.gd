@@ -4,7 +4,11 @@ extends Node2D
 onready var timer = get_node("Timer")
 
 export var speed = 10
+<<<<<<< HEAD
 export(float) var rate
+=======
+export(float, 0, 1, .1) var rate
+>>>>>>> origin/master
 export(String, "Small", "Medium", "Big") var size
 export(String, "Random", "Specific") var mode
 
@@ -26,6 +30,7 @@ func _ready():
 	
 	NodeData.add_data("SpawnRate", rate)
 	
+<<<<<<< HEAD
 	spawners.append(get_node("Position2D"))
 	spawners.append(get_node("Position2D1"))
 	spawners.append(get_node("Position2D2"))
@@ -35,6 +40,12 @@ func _ready():
 	positions.append(spawners[1].get_pos())
 	positions.append(spawners[2].get_pos())
 	positions.append(spawners[3].get_pos())
+=======
+	positions.append(get_node("Position2D").get_global_pos())
+	positions.append(get_node("Position2D1").get_global_pos())
+	positions.append(get_node("Position2D2").get_global_pos())
+	positions.append(get_node("Position2D3").get_global_pos())
+>>>>>>> origin/master
 
 # -------------------------------------------------------------------------
 
@@ -46,12 +57,16 @@ func _process(delta):
 
 	if posIndex > 3 or posIndex < 0:
 		posIndex = 0
+<<<<<<< HEAD
 		
 	positions[0] = spawners[0].get_global_pos()
 	positions[1] = spawners[1].get_global_pos()
 	positions[2] = spawners[2].get_global_pos()
 	positions[3] = spawners[3].get_global_pos()
 	
+=======
+
+>>>>>>> origin/master
 	timer.set_wait_time(NodeData.Data.SpawnRate)
 
 # -------------------------------------------------------------------------

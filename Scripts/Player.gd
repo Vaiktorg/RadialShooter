@@ -7,14 +7,21 @@ var motion = Vector2()
 var xaxis
 var yaxis
 
+<<<<<<< HEAD
 export(float) var rot_speed = 90
+=======
+export(float) var speed = 90
+>>>>>>> origin/master
 
 var bulletscene = preload("res://MiniScenes/Bullet.tscn")
 onready var bulletpos = get_node("BulletSpawn")
 onready var sound = get_node("SamplePlayer")
+<<<<<<< HEAD
 onready var orbit = get_node("../Orbit")
 
 # --------------------------------------------------------------------------
+=======
+>>>>>>> origin/master
 
 func _ready():
 	set_process_input(true)
@@ -25,7 +32,11 @@ func _process(delta):
 
 func _input(event):
 	if event.is_action_pressed("Shoot"):
+<<<<<<< HEAD
 		Sound.play("Shoot")
+=======
+		sound.play("Shoot")
+>>>>>>> origin/master
 		spawn_bullet(bulletscene)
 
 # --------------------------------------------------------------------------

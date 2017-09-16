@@ -3,6 +3,13 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/player/Space_Ship/Player.png" type="Texture" id=2]
 [ext_resource path="res://Sounds/Shoot.wav" type="Sample" id=3]
+<<<<<<< HEAD
+=======
+
+[sub_resource type="SampleLibrary" id=1]
+
+samples/Shoot = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+>>>>>>> origin/master
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -17,8 +24,12 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 __meta__ = { "_edit_group_":true }
+<<<<<<< HEAD
 rot_speed = 90
 free_speed = 200
+=======
+speed = 90.0
+>>>>>>> origin/master
 
 [node name="BulletSpawn" type="Position2D" parent="."]
 

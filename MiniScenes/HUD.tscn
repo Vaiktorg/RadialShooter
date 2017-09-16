@@ -22,9 +22,15 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 104.0
+<<<<<<< HEAD
 margin/top = 136.0
 margin/right = 152.0
 margin/bottom = 144.0
+=======
+margin/top = 137.0
+margin/right = 152.0
+margin/bottom = 145.0
+>>>>>>> origin/master
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.0313726, 0.0941176, 0.12549, 1 )
 text = "Wave: "
@@ -40,9 +46,15 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 40.0
+<<<<<<< HEAD
 margin/top = 0.0
 margin/right = 56.0
 margin/bottom = 8.0
+=======
+margin/top = -1.0
+margin/right = 56.0
+margin/bottom = 7.0
+>>>>>>> origin/master
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.0313726, 0.0901961, 0.121569, 1 )
 text = "0"
@@ -51,6 +63,7 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="PointLabel" type="Label" parent="."]
+<<<<<<< HEAD
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -70,6 +83,27 @@ __meta__ = { "_edit_group_":true }
 
 [node name="Points" type="Label" parent="PointLabel"]
 
+=======
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 56.0
+margin/bottom = 8.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.0313726, 0.0901961, 0.121569, 1 )
+text = "Points:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = { "_edit_group_":true }
+
+[node name="Points" type="Label" parent="PointLabel"]
+
+>>>>>>> origin/master
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2

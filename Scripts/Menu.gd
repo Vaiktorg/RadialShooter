@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 extends Node
+=======
+extends Control
+>>>>>>> origin/master
 
 onready var playbtn = get_node("Panel/PlayBtn")
 onready var quitbtn = get_node("Panel/Quit")

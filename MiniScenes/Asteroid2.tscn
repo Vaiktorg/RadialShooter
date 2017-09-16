@@ -18,7 +18,11 @@ collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
+<<<<<<< HEAD
 speed = 10.0
+=======
+speed = 20.0
+>>>>>>> origin/master
 
 [node name="Sprite" type="Sprite" parent="."]
 
